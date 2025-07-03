@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cultural Mosaic - Exploring Japanese Culture</title>
+  <meta name="description" content="An immersive journey through Japanese tradition, identity, and change. Academic research on Japanese culture by Basel Lubbad for HSC4M.">
+  <meta name="author" content="Basel Lubbad">
+  <meta name="keywords" content="Japanese culture, HSC4M, World Cultures, academic research, Japan, traditions">
+  
+  <!-- Open Graph tags -->
+  <meta property="og:title" content="Cultural Mosaic - Exploring Japanese Culture">
+  <meta property="og:description" content="Academic research on Japanese culture covering bibliography, news, advice, editorial, arts, religion, and challenges.">
+  <meta property="og:type" content="website">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --background: 0 0% 100%;
+      --foreground: 222.2 84% 4.9%;
+      --card: 0 0% 100%;
+      --card-foreground: 222.2 84% 4.9%;
+      --popover: 0 0% 100%;
+      --popover-foreground: 222.2 84% 4.9%;
+      --primary: 222.2 47.4% 11.2%;
+      --primary-foreground: 210 40% 98%;
+      --secondary: 210 40% 96%;
+      --secondary-foreground: 222.2 47.4% 11.2%;
+      --muted: 210 40% 96%;
+      --muted-foreground: 215.4 16.3% 46.9%;
+      --accent: 210 40% 96%;
+      --accent-foreground: 222.2 47.4% 11.2%;
+      --destructive: 0 84.2% 60.2%;
+      --destructive-foreground: 210 40% 98%;
+      --border: 214.3 31.8% 91.4%;
+      --input: 214.3 31.8% 91.4%;
+      --ring: 222.2 84% 4.9%;
+      --radius: 0.5rem;
+      --chart-1: 12 76% 61%;
+      --chart-2: 173 58% 39%;
+      --chart-3: 197 37% 24%;
+      --chart-4: 43 74% 66%;
+      --chart-5: 27 87% 67%;
+    }
+
+    .dark {
+      --background: 222.2 84% 4.9%;
+      --foreground: 210 40% 98%;
+      --card: 222.2 84% 4.9%;
+      --card-foreground: 210 40% 98%;
+      --popover: 222.2 84% 4.9%;
+      --popover-foreground: 210 40% 98%;
+      --primary: 210 40% 98%;
+      --primary-foreground: 222.2 47.4% 11.2%;
+      --secondary: 217.2 32.6% 17.5%;
+      --secondary-foreground: 210 40% 98%;
+      --muted: 217.2 32.6% 17.5%;
+      --muted-foreground: 215 20.2% 65.1%;
+      --accent: 217.2 32.6% 17.5%;
+      --accent-foreground: 210 40% 98%;
+      --destructive: 0 62.8% 30.6%;
+      --destructive-foreground: 210 40% 98%;
+      --border: 217.2 32.6% 17.5%;
+      --input: 217.2 32.6% 17.5%;
+      --ring: 212.7 26.8% 83.9%
+    }
+
+    * {
+      border-color: hsl(var(--border));
+    }
+
+    body {
+      background-color: hsl(var(--background));
+      color: hsl(var(--foreground));
+      font-family: 'Noto Sans JP', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+      color: white;
+      padding: 4rem 0;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .section {
+      padding: 3rem 0;
+      border-bottom: 1px solid hsl(var(--border));
+    }
+
+    .section:nth-child(even) {
+      background-color: hsl(var(--muted) / 0.3);
+    }
+
+    .section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      text-align: center;
+      color: hsl(var(--primary));
+    }
+
+    .articles-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .article-card {
+      background: hsl(var(--card));
+      border: 1px solid hsl(var(--border));
+      border-radius: 0.5rem;
+      padding: 1.5rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .article-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    }
+
+    .article-card h3 {
+      font-family: 'Playfair Display', serif;
+      color: hsl(var(--primary));
+      margin-bottom: 1rem;
+    }
+
+    .article-card p {
+      color: hsl(var(--muted-foreground));
+      margin-bottom: 1rem;
+    }
+
+    .article-meta {
+      font-size: 0.9rem;
+      color: hsl(var(--muted-foreground));
+      border-top: 1px solid hsl(var(--border));
+      padding-top: 1rem;
+    }
+
+    .footer {
+      background: hsl(var(--primary));
+      color: hsl(var(--primary-foreground));
+      text-align: center;
+      padding: 2rem 0;
+    }
+
+    .footer p {
+      margin: 0.5rem 0;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+      
+      .section h2 {
+        font-size: 2rem;
+      }
+      
+      .articles-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="hero">
+    <div class="container">
+      <h1>Cultural Mosaic</h1>
+      <p>Exploring Japanese Culture</p>
+      <p>An immersive journey through tradition, identity, and change</p>
+      <p><strong>By Basel Lubbad | HSC4M World Cultures</strong></p>
+    </div>
+  </div>
+
+  <div class="section" id="bibliography">
+    <div class="container">
+      <h2>Bibliography</h2>
+      <div class="articles-grid">
+        <div class="article-card">
+          <h3>Deep China: The Moral Life of Persons</h3>
+          <p>This interdisciplinary source explores how traditional values rooted in Confucianism and Buddhism influence behavior in East Asian societies, including Japan (Bestor, 2020). The work examines moral life through psychological and anthropological lenses, highlighting family obligations, elder respect, and ethical choices in Japanese daily life.</p>
+          <div class="article-meta">
+            <p><strong>Author:</strong> Bestor, T. C. (2020)</p>
+            <p><strong>Keywords:</strong> anthropology, psychology, Confucianism, Buddhism</p>
+          </div>
+        </div>
+
+        <div class="article-card">
+          <h3>Molding Japanese Minds: The State in Everyday Life</h3>
+          <p>Garon's work investigates how Japan's government historically shaped citizens' behavior through education, media, and tradition (Garon, 2017). It provides insights into how cultural rituals, community identity, and national holidays like Respect for the Aged Day are institutionalized.</p>
+          <div class="article-meta">
+            <p><strong>Author:</strong> Garon, S. (2017)</p>
+            <p><strong>Keywords:</strong> government, education, cultural rituals, community identity</p>
+          </div>
+        </div>
+
+        <div class="article-card">
+          <h3>Understanding Japanese Society (4th ed.)</h3>
+          <p>Hendry offers an anthropological overview of Japanese culture, covering everything from gender roles to ceremonial life (Hendry, 2013). It provides historical insights into how customs evolve while maintaining their original meanings, with discussions on collectivism, aging, and cultural education.</p>
+          <div class="article-meta">
+            <p><strong>Author:</strong> Hendry, J. (2013)</p>
+            <p><strong>Keywords:</strong> anthropology, gender roles, ceremonies, collectivism</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section" id="news">
+    <div class="container">
+      <h2>Current News</h2>
+      <div class="articles-grid">
+        <div class="article-card">
+          <h3>Japan to Expand Migration Program to Address Labor Shortages</h3>
+          <p>In response to a declining birth rate and rapidly aging population, Japan is expanding its immigration policies. The country is opening pathways for permanent residency in sectors like manufacturing, healthcare, and agriculture as part of a broader national shift toward inclusivity and global participation.</p>
+          <div class="article-meta">
+            <p><strong>Author:</strong> Colin Dwyer (2024)</p>
+            <p><strong>Keywords:</strong> immigration, labor shortage, demographics, policy</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section" id="advice">
+    <div class="container">
+      <h2>Cultural Advice</h2>
+      <div class="articles-grid">
+        <div class="article-card">
+          <h3>Understanding Japanese Rites of Passage</h3>
+          <p>Welcome to your new community! Japanese culture is rich in tradition and symbolism. Key rites include Seijin Shiki (coming of age at 20), Shichi-Go-San (celebrated for children aged 3, 5, and 7), and traditional wedding ceremonies that blend Shinto and Western customs.</p>
+          <div class="article-meta">
+            <p><strong>Author:</strong> A World Cultures Expert (2024)</p>
+            <p><strong>Keywords:</strong> rites of passage, newcomers, traditions, ceremonies</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section" id="editorial">
+    <div class="container">
+      <h2>Editorial</h2>
+      <div class="articles-grid">
+        <div class="article-card">
+          <h3>The Revered Role of Elders in Japan</h3>
+          <p>Japanese society is renowned for its respect for elders. People aged 65+ are honored not just for their age but for their contributions to family, work, and wisdom. They serve as cultural custodians, participating in storytelling, caregiving, and guiding youth through multi-generational households and community leadership.</p>
+          <div class="article-meta">
+            <p><strong>Author:</strong> Editorial Team (2024)</p>
+            <p><strong>Keywords:</strong> elders, respect, family, community</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section" id="arts">
+    <div class="container">
+      <h2>Arts & Culture</h2>
+      <div class="articles-grid">
+        <div class="article-card">
+          <h3>Traditional and Contemporary Music</h3>
+          <p>Japan's music ranges from traditional sounds of the shamisen and koto to contemporary J-pop. Gagaku (imperial court music) and taiko drumming are deeply spiritual and performed in sacred settings, representing the country's rich musical heritage.</p>
+          <div class="article-meta">
+            <p><strong>Keywords:</strong> music, shamisen, koto, J-pop, Gagaku, taiko</p>
+          </div>
+        </div>
+
+        <div class="article-card">
+          <h3>Heritage in Motion: Traditional Dance</h3>
+          <p>Cultural dances like Noh, Kabuki, and Bon Odori are not just entertainment—they're heritage passed down through generations, preserving cultural narratives and spiritual connections.</p>
+          <div class="article-meta">
+            <p><strong>Keywords:</strong> dance, Noh, Kabuki, Bon Odori, heritage</p>
+          </div>
+        </div>
+
+        <div class="article-card">
+          <h3>Traditional Clothing: Symbolic Expressions</h3>
+          <p>Traditional garments like kimono and yukata are worn during festivals and ceremonies. Seasonal colors and motifs carry symbolic meaning, representing the wearer's connection to nature and cultural identity.</p>
+          <div class="article-meta">
+            <p><strong>Keywords:</strong> clothing, kimono, yukata, festivals, symbolism</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section" id="religion">
+    <div class="container">
+      <h2>Religion & Spirituality</h2>
+      <div class="articles-grid">
+        <div class="article-card">
+          <h3>Sacred and Everyday Rituals</h3>
+          <p>Japanese religion is practiced through daily rituals, seasonal festivals, and ancestral respect. Shinto, based on nature worship and kami (spiritual beings), combines with Buddhism's focus on impermanence and enlightenment. Popular rituals include shrine visits during New Year, Obon ceremonies, and omikuji fortune slips.</p>
+          <div class="article-meta">
+            <p><strong>Keywords:</strong> Shinto, Buddhism, rituals, shrines, festivals</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section" id="challenges">
+    <div class="container">
+      <h2>Modern Challenges</h2>
+      <div class="articles-grid">
+        <div class="article-card">
+          <h3>Aging Crisis: Demographic Challenges</h3>
+          <p>With 1 in 3 citizens over age 65, Japan faces workforce shrinkage, rising healthcare costs, and shifting family structures. Current policies encourage elder employment and controlled immigration to address these demographic pressures.</p>
+          <div class="article-meta">
+            <p><strong>Author:</strong> Susan Martin (2024)</p>
+            <p><strong>Keywords:</strong> aging, demographics, workforce, healthcare</p>
+          </div>
+        </div>
+
+        <div class="article-card">
+          <h3>Cultural Erosion: Tradition vs. Globalization</h3>
+          <p>Globalization, digital media, and westernization threaten traditional practices. Festivals and languages are at risk as youth lean toward global trends, creating tension between cultural preservation and modernization.</p>
+          <div class="article-meta">
+            <p><strong>Author:</strong> Susan Martin (2024)</p>
+            <p><strong>Keywords:</strong> globalization, cultural erosion, traditions, youth</p>
+          </div>
+        </div>
+
+        <div class="article-card">
+          <h3>Environmental Pressures</h3>
+          <p>Japan leads in green technology, but urbanization impacts biodiversity and traditional farming. Climate policies aim to preserve rural heritage while balancing progress with environmental stewardship.</p>
+          <div class="article-meta">
+            <p><strong>Author:</strong> Susan Martin (2024)</p>
+            <p><strong>Keywords:</strong> environment, urbanization, green technology, rural heritage</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="container">
+      <p><strong>Cultural Mosaic: Exploring Japanese Culture</strong></p>
+      <p>This blog was created as a final project for HSC4M (World Cultures)</p>
+      <p>© 2025 Basel Lubbad. Academic research on Japanese cultural traditions, identity, and modern challenges.</p>
+    </div>
+  </div>
+</body>
+</html>
